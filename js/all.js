@@ -66,8 +66,8 @@ function startGame(){
                 let cardsuit = cardinfo[0];
                 let cardnumber = cardinfo[1];
                 let cardcolor = cardinfo[2];
-                let cardimage = '<img src="img/card/' + cardsuit + '/' + cardsuit.substr(0, 1) + '_' + cardnumber + '.svg" alt=" ">';
-                let card = '<div class="card" draggable="true">' + cardimage + '</div>';
+                let cardimg = 'background-image:url(../img/card/'+ cardsuit + '/' + cardsuit.substr(0, 1) + '_' + cardnumber + '.svg)';
+                let card = '<div class="card" draggable="true" style='+ cardimg + '></div>';
                 $('.item' + [i + 1]).append(card);
             }
         }
@@ -86,13 +86,36 @@ function startGame(){
         }
     };
 
+
+    let dragCard = document.querySelectorAll('.card');
+    for(let i=0; i<52;i++){
+        dragCard[i].addEventListener('dragstart', startDrag);
+        // dragCard[i].addEventListener('drop', endDrag, false);
+    }
+
+
+    let ltable = document.querySelectorAll('.lefttable');
+    for (let i = 0; i < ltable.length; i++) {
+        
+        ltable[i].addEventListener('drop', endDrag);
+        ltable[i].addEventListener('dragover', overDrag);
+    }
     
-    function starDrag(e){
+    
+    function startDrag(e){
+        e.dataTransfer.setData("text", e.target.className   );
+    };
+    function overDrag(e) {
+        e.preventDefault();
+    };
+    function endDrag(e){
+        e.preventDefault();
+        var data = e.dataTransfer.getData("text");
 
     };
-    function endDrag(){
+   
 
-    };
 
 };
+
 window.addEventListener('load', startGame, false);
