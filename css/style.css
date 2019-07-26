@@ -1,0 +1,93 @@
+.container{
+    width: 100%;
+    min-width: 1900px;
+    background-color: #0F1620;
+}
+.wrapper{
+    position: relative;
+    padding: 0 180px 10px 180px;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 52px;
+    padding-bottom: 40px;
+}
+.top .logo{
+    width: 384px;
+}
+.top .info{
+    vertical-align: middle;
+    display:flex;
+    font-size: 40px;
+    color: #E6BF8D;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+}
+.top .info .time{
+    margin-right: 70px;
+}
+.nav ul li{
+    position: absolute;
+    cursor: pointer;
+    right: 66px;
+}
+.indo{
+    top: 143px;
+}
+.hint{
+    top: 235px;
+}
+.group{
+    top: 327px;
+}
+#face{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+.item{
+    width: 180px;
+}
+.lrtable{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+.left,.right{
+    display: flex;
+    justify-content: space-between;
+}
+.left .left-table{
+    margin-right: 30px;
+}
+.right .right-table{
+    margin-left: 30px;
+    border: none;
+    background-image: url(../img/Component.svg);
+    background-repeat: no-repeat;
+}
+.tablecard{
+    box-sizing: border-box;
+    width: 154px;
+    height: 215px;
+    border: 7px solid #FCCD8D;
+    border-radius: 18px;
+}
+.item{
+    margin: 0 20px;
+    vertical-align: top;
+
+}
+.card img{
+    width: 100%;
+} 
+.card{
+    width: 154px;
+    height: 215px;
+    margin-top: -165px;
+}
+.item .card:first-child{
+    margin-top: 0;
+}
+
