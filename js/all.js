@@ -66,7 +66,7 @@ function startGame(){
                 let cardsuit = cardinfo[0];
                 let cardnumber = cardinfo[1];
                 let cardcolor = cardinfo[2];
-                let cardimg = 'background-image:url(../img/card/'+ cardsuit + '/' + cardsuit.substr(0, 1) + '_' + cardnumber + '.svg)';
+                let cardimg = 'background-image:url(img/card/'+ cardsuit + '/' + cardsuit.substr(0, 1) + '_' + cardnumber + '.svg)';
                 let card = '<div class="card" draggable="true" style='+ cardimg + '></div>';
                 $('.item' + [i + 1]).append(card);
             }
